@@ -19,14 +19,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    private static class GameConfig {
-        private final Map<Integer, GameElement> gameElementMap;
-        private final List<Player> players;
-
-        private GameConfig(Map<Integer, GameElement> gameElementMap, List<Player> players) {
-            this.gameElementMap = gameElementMap;
-            this.players = players;
-        }
+    private record GameConfig(Map<Integer, GameElement> gameElementMap, List<Player> players) {
     }
 
     private static GameConfig loadGameConfig(String inputPath) {
